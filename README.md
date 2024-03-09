@@ -3,7 +3,7 @@
 
 ## Lista czujników
 - CO2 - SCD41
-- Pyły - PMS5003
+- Pyły - PMS7003
 - cisnienie - wibme280
 
 ## Podział obowiazków
