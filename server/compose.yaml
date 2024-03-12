@@ -1,0 +1,26 @@
+services:
+  metric-writer:
+    build: ./metricwriter
+  grafana:
+    image: "grafana/grafana-oss:10.4.0"
+    ports:
+      - "3000:3000"
+    volumes:
+      - grafana-data:/var/lib/grafana
+  postgres:
+    image: "postgres:16.2"
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_HOST_AUTH_METHOD=trust
+    volumes:
+      - postgres-data:/var/lib/postgresql
+  mqttbroker:
+    image: "eclipse-mosquitto"
+    ports:
+      - "1883:1883"
+      - "9001:9001"
+
+volumes:
+  grafana-data:
+  postgres-data:
