@@ -1,1 +1,3 @@
 **/.DS_Store
+esp32/station/build
+esp32/station/.vscode
